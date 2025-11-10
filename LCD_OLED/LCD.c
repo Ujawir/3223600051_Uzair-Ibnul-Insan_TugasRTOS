@@ -10,7 +10,6 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 TaskHandle_t oledTask;
 
 void oledTaskCode(void *pvParameters) {
-  // GANTI: Wire.begin(SDA, SCL) → GPIO 8, 9
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println("OLED failed"); for(;;);
   }
@@ -31,7 +30,7 @@ void oledTaskCode(void *pvParameters) {
 void setup() {
   Serial.begin(115200);
   
-  // GANTI: Wire.begin(8, 9)
+  
   Wire.begin(8, 9); // SDA = GPIO 8, SCL = GPIO 9
 
   xTaskCreatePinnedToCore(oledTaskCode, "OLED", 4096, NULL, 1, &oledTask, 1);

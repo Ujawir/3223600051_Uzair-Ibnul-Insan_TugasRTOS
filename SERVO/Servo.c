@@ -15,9 +15,7 @@ void ServoTask(void *pvParameters) {
 }
 
 void setup() {
-  // Attach servo to GPIO 4, assign channel 0 explicitly for S3
   myServo.attach(4, 500, 2500);  
-  // (500–2500 µs pulse width)
 
   xTaskCreatePinnedToCore(
     ServoTask,
@@ -26,10 +24,9 @@ void setup() {
     NULL,
     1,
     &ServoTaskHandle,
-    0  // Run on core 0
+    0  
   );
 }
 
 void loop() {
-  // Empty - FreeRTOS handles tasks
 }

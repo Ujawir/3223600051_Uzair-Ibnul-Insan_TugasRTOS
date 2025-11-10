@@ -1,6 +1,6 @@
-#define CLK 10   // Tetap
-#define DT  11   // Tetap
-#define SW  7    // GANTI DARI 12 → 7
+#define CLK 10
+#define DT  11
+#define SW  7
 
 TaskHandle_t encTask;
 volatile int counter = 0;

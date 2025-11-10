@@ -1,9 +1,9 @@
-#define BUTTON1_PIN  5   // Tombol 1 terhubung ke GPIO5
-#define BUTTON2_PIN  6   // Tombol 2 terhubung ke GPIO6
+#define BUTTON1_PIN  5
+#define BUTTON2_PIN  6
 
 void setup() {
   Serial.begin(115200);
-  pinMode(BUTTON1_PIN, INPUT_PULLUP);  // Gunakan internal pull-up resistor
+  pinMode(BUTTON1_PIN, INPUT_PULLUP);
   pinMode(BUTTON2_PIN, INPUT_PULLUP);
 }
 

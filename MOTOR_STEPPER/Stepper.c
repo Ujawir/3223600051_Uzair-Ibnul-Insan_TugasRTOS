@@ -5,7 +5,6 @@
 #define B_PLUS  12
 #define B_MINUS 11
 
-// --- Jumlah langkah per putaran (umum untuk motor bipolar) ---
 const int stepsPerRevolution = 200;
 
 Stepper myStepper(stepsPerRevolution, A_MINUS, A_PLUS, B_PLUS, B_MINUS);
